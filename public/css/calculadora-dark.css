@@ -1,0 +1,159 @@
+* {
+    font-family: Roboto;
+}
+
+.body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #202125;
+}
+
+.contenidor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
+  height: 100vh;
+  background-color: #202125;
+  margin-bottom: -26.2vh;
+}
+
+.calculator {
+  background: #3c4043;
+  border-radius: 5px;
+  padding: 5px;
+  width: 300px;
+  min-width: 300px;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  background: #f0f0f0;
+  min-height: 50px;
+  padding: 5px;
+  margin: 0 1px 10px;
+  border-radius: 0.25rem;
+}
+
+.output pre {
+  text-align: left;
+  font-size: 25px;
+  margin: 0;
+  width: 288px;
+  font-weight: normal;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  color: black;
+}
+
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input button {
+  width: 51px;
+  height: 50px;
+  margin: 8px 12px;
+  font-weight: normal;
+  background-color: #435765;
+  box-shadow: inset 1px 1px 2px #435765;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+.input .botonoperacion {
+    width: 51px;
+    height: 50px;
+    margin: 8px 12px;
+    font-weight: normal;
+    background-color: #145399;
+    box-shadow: inset 1px 1px 2px #145399;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+  }
+
+.input .botonoperacion:hover {
+    background-color: #0d3563;
+    color: white;
+    box-shadow: inset 1px 1px 2px #0d3563;
+}
+
+.input .botonigual {
+  width: 200px;
+  height: 50px;
+  font-weight: normal;
+  background-color: #145399;
+  box-shadow: inset 1px 1px 2px #145399;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+.input .botonigual:hover {
+    background-color: #0d3563;
+    box-shadow: inset 1px 1px 2px #0d3563;
+    color: white;
+}
+
+.input button:hover {
+  background-color: white;
+  color: #435765;
+}
+
+.botonEstilo {
+    background-color: #3c4043;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 80px;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+  }
+
+  .botonEstilo:hover {
+    background-color: #435765;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .botonEstilo2 {
+    background-color: #3c4043;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    margin-top: 80px;
+    align-items: center;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+  }
+
+  .botonEstilo2:hover {
+    background-color: #435765;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .estilosBotones {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
