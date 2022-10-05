@@ -1,5 +1,4 @@
 const nombreJugador = [];
-const numerosBingo = [];
 let turnosBingo = 1;
 
 function randomNumberBingo(min, max) {
@@ -7,7 +6,6 @@ function randomNumberBingo(min, max) {
   max = 20;
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-const randomNumber = randomNumberBingo();
 
 const cartaBingo = [
   { number: 1, matched: false },
@@ -17,26 +15,24 @@ const cartaBingo = [
   { number: 20, matched: false },
 ];
 
-function bingo() {
-  preguntarUsuario();
-}
+let usuario;
 
-function preguntarUsuario() {
+const preguntarUsuario = () => {
   usuario = prompt("Escribe tu nombre de usuario.");
   if (usuario) {
     nombreJugador.push(usuario);
-    alert(`Bienvenido ${usuario}!`);
     introBingo();
-  } else if (usuario == null || typeof usuario === "") {
+  } else if (usuario == null || usuario.length === 0) {
     console.log("Introduce tu nombre de usuario!");
     return preguntarUsuario();
   } else {
     console.log("No olvides introducir tu nombre de usuario!");
     return preguntarUsuario();
   }
-}
+};
 
-function introBingo() {
+let iniciarBingo;
+const introBingo = () => {
   for (let i = 0; i < cartaBingo.length; i++) {
     console.log(
       `Números: ${cartaBingo[0].number} | ${cartaBingo[1].number} | ${cartaBingo[2].number} | ${cartaBingo[3].number} | ${cartaBingo[4].number}`
@@ -47,22 +43,12 @@ function introBingo() {
     console.log(`Turno ${turnosBingo}`);
     turnoNumero();
   } else {
-    alert("Fin de partida!");
     console.log("Fin de partida!");
     volverDeNuevo();
   }
-}
+};
 
-function volverDeNuevo() {
-  nuevoJuego = confirm("Quieres volver a jugar?");
-  if (nuevoJuego === true) {
-    bingo();
-  } else {
-    console.log("Hasta la próxima!");
-  }
-}
-
-function turnoNumero() {
+const turnoNumero = () => {
   if (randomNumberBingo() === cartaBingo[0].number) {
     console.log(`Has obtenido el número ${cartaBingo[0].number}`);
     cartaBingo[0].number = "X";
@@ -101,7 +87,20 @@ function turnoNumero() {
   }
   turnosBingo++;
   ganarPasarTurno();
-}
+};
+
+let nuevoJuego;
+
+const volverDeNuevo = () => {
+  nuevoJuego = confirm("Quieres volver a jugar?");
+  if (nuevoJuego === true) {
+    bingo();
+  } else {
+    console.log("Hasta la próxima!");
+  }
+};
+
+let iniciarTurno;
 
 function turnos() {
   iniciarTurno = prompt("Listo para comenzar el turno? si / no");
@@ -111,7 +110,7 @@ function turnos() {
   } else if (iniciarTurno === "no") {
     alert("Fin de partida!");
     volverDeNuevo();
-  } else if (iniciarTurno == null || typeof iniciarTurno === "") {
+  } else if (iniciarTurno == null || iniciarTurno.length === 0) {
     console.log("Introduce si / no");
     return turnos();
   } else {
@@ -120,7 +119,9 @@ function turnos() {
   }
 }
 
-function ganarPasarTurno() {
+let pasarTurno;
+
+const ganarPasarTurno = () => {
   if (
     cartaBingo[0].number === "X" &&
     cartaBingo[1].number === "X" &&
@@ -146,10 +147,10 @@ function ganarPasarTurno() {
       volverDeNuevo();
     }
   }
-}
+};
 
-/* Falta afegir que imprimeixi el número quan no sigui cap dels de la cartaBingo pero tinc el
-problema que afegint un altre cop la funció em genera un número diferent al generat en l'if else
-*/
+const bingo = () => {
+  preguntarUsuario();
+};
 
 bingo();
