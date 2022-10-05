@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasapalabra HTML CSS</title>
+  <link rel="stylesheet" href="./css/pasapalabra.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style type="text/CSS">
+    * {font-family: "Roboto"}
+    </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="usuario">
+      <h2 class="nombre-usuario" id="nombre-usuario">usuario</h2>
+    </div>
+
+    <div class="aciertos">
+      <h2 class="numero-aciertos" id="aciertos">0</h2>
+      <p>NUM. ACIERTOS</p>
+    </div>
+
+    <div class="tiempo">
+      <h2 class="tiempo-restante" id="tiempo"></h2>
+      <p>TIEMPO</p>
+    </div>
+  </div>
+  <div class="body" id="body">
+    <div class="circle-background">
+      <ul class="circle">
+        <li class="item" id="fondo">A</li>
+        <li class="item" id="fondo">B</li>
+        <li class="item" id="fondo">C</li>
+        <li class="item" id="fondo">D</li>
+        <li class="item" id="fondo">E</li>
+        <li class="item" id="fondo">F</li>
+        <li class="item" id="fondo">G</li>
+        <li class="item" id="fondo">H</li>
+        <li class="item" id="fondo">I</li>
+        <li class="item" id="fondo">J</li>
+        <li class="item" id="fondo">L</li>
+        <li class="item" id="fondo">M</li>
+        <li class="item" id="fondo">N</li>
+        <li class="item" id="fondo" v>Ñ</li>
+        <li class="item" id="fondo">O</li>
+        <li class="item" id="fondo">P</li>
+        <li class="item" id="fondo">Q</li>
+        <li class="item" id="fondo">R</li>
+        <li class="item" id="fondo" v>S</li>
+        <li class="item" id="fondo">T</li>
+        <li class="item" id="fondo">U</li>
+        <li class="item" id="fondo">V</li>
+        <li class="item" id="fondo">X</li>
+        <li class="item" id="fondo">Y</li>
+        <li class="item" id="fondo">Z</li>
+      </ul>
+    </div>
+
+    <div class="box-introduccion" id="box-introduccion">
+      <h2>Bienvenido al pasapalabra de ISDI CODERS</h2>
+      <p>Se mostraran unas definiciones por pantalla y el usuario deberá responder con la palabra a la que corresponden.
+        El usuario tiene la opción de decir Pasapalabra y dejar esa definición para mas adelante.<br><br>Se debe
+        introducir la palabra sin tilde. Es posible utilizar la tecla ENTER para enviar la palabra y el SPACE para hacer
+        pasapalabra.</p>
+      <input type="text" class="usuario-input" id="usuario-input">
+      <input type="submit" class="button" onclick="jugar()" value="JUGAR" id="usuario-submit"></button>
+    </div>
+  </div>
+  <div class="body2" id="body2">
+    <div class="circle-background">
+      <ul class="circle">
+        <li class="item">A</li>
+        <li class="item">B</li>
+        <li class="item">C</li>
+        <li class="item">D</li>
+        <li class="item">E</li>
+        <li class="item">F</li>
+        <li class="item">G</li>
+        <li class="item">H</li>
+        <li class="item">I</li>
+        <li class="item">J</li>
+        <li class="item">L</li>
+        <li class="item">M</li>
+        <li class="item">N</li>
+        <li class="item">Ñ</li>
+        <li class="item">O</li>
+        <li class="item">P</li>
+        <li class="item">Q</li>
+        <li class="item">R</li>
+        <li class="item">S</li>
+        <li class="item">T</li>
+        <li class="item">U</li>
+        <li class="item">V</li>
+        <li class="item">X</li>
+        <li class="item">Y</li>
+        <li class="item">Z</li>
+      </ul>
+    </div>
+
+    <div class="box-pasapalabra" id="box-pasapalabra">
+      <p id="pregunta-pasapalabra">Pregunta</p>
+      <input type="text" class="respuesta-input" id="respuesta-input">
+      <input type="submit" class="button-comprobar" value="COMPROBAR" id="comprobar-submit"
+        onclick="checkRespuesta()"></button>
+      <input type="submit" class="button-pasapalabra" value="PASAPALABRA" id="pasapalabra-submit"
+        onclick="pasapalabra()"></button>
+    </div>
+  </div>
+
+  <div class="body3" id="body3">
+    <div class="circle-background">
+      <ul class="circle">
+        <li class="item">A</li>
+        <li class="item">B</li>
+        <li class="item">C</li>
+        <li class="item">D</li>
+        <li class="item">E</li>
+        <li class="item">F</li>
+        <li class="item">G</li>
+        <li class="item">H</li>
+        <li class="item">I</li>
+        <li class="item">J</li>
+        <li class="item">L</li>
+        <li class="item">M</li>
+        <li class="item">N</li>
+        <li class="item">Ñ</li>
+        <li class="item">O</li>
+        <li class="item">P</li>
+        <li class="item">Q</li>
+        <li class="item">R</li>
+        <li class="item">S</li>
+        <li class="item">T</li>
+        <li class="item">U</li>
+        <li class="item">V</li>
+        <li class="item">X</li>
+        <li class="item">Y</li>
+        <li class="item">Z</li>
+      </ul>
+    </div>
+
+    <div class="box-fin" id="box-fin">
+      <p id="puntuacion-final"></p>
+      <input type="submit" class="button-iniciarDeNuevo" value="VOLVER A JUGAR" id="iniciarDeNuevo"
+        onclick="iniciarDeNuevo()"></button>
+    </div>
+  </div>
+  <script src="./js/pasapalabra-html/pasapalabra.js"></script>
+</body>
+
+</html>
