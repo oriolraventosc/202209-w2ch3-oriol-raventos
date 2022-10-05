@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="estilos" rel="stylesheet" href="./css/calculadora-light.css">
+  <title>Calculadora HTML/CSS/JS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2374/2374370.png">
+  <style type="text/CSS">
+    * {font-family: "Roboto"}
+  </style>
+</head>
+
+<body class="body">
+  <div class="contenidor">
+    <div class="calculator">
+      <div class="output">
+        <pre id="lower">0</pre>
+      </div>
+      <div class="input">
+        <button onclick="botonClear()">C</button>
+        <button onclick="botonDel()">Del</button>
+        <button onclick="botonNum(this)">0</button>
+        <button class="botonoperacion" onclick="botonSuma()">+</button>
+        <button onclick="botonNum(this)">1</button>
+        <button onclick="botonNum(this)">2</button>
+        <button onclick="botonNum(this)">3</button>
+        <button class="botonoperacion" onclick="botonResta()">-</button>
+        <button onclick="botonNum(this)">4</button>
+        <button onclick="botonNum(this)">5</button>
+        <button onclick="botonNum(this)">6</button>
+        <button class="botonoperacion" onclick="botonMultiplicacion()">&times;</button>
+        <button onclick="botonNum(this)">7</button>
+        <button onclick="botonNum(this)">8</button>
+        <button onclick="botonNum(this)">9</button>
+        <button class="botonoperacion" onclick="botonDivision()">&div;</button>
+        <button onclick="botonPunto()">.</button>
+        <button class="botonigual" onclick="botonIgual(operacion)">=</button>
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+  <div class="estilosBotones">
+    <button class="botonEstilo" onclick="dark()">Dark Mode</button><button class="botonEstilo2" onclick="light()">Light
+      Mode</button>
+  </div>
+  <script src="./js/calculadora-html/calculadora.js"></script>
+</body>
+
+</html>
