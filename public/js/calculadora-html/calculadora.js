@@ -2,6 +2,7 @@ const outputLower = document.querySelector("#lower");
 let num1 = [];
 let num2 = [];
 let operacion;
+let resultado;
 
 function botonNum(e) {
   if (outputLower.innerHTML === "0") {
@@ -52,7 +53,7 @@ function botonIgual() {
       resultado = num1 + num2;
       if (Number.isInteger(resultado)) {
         outputLower.innerHTML = resultado;
-      } else if (isNaN(resultado)) {
+      } else if (Number.isNaN(resultado)) {
         outputLower.innerHTML = "Error";
       } else {
         outputLower.innerHTML = resultado.toFixed(3);
@@ -62,7 +63,7 @@ function botonIgual() {
       resultado = num1 - num2;
       if (Number.isInteger(resultado)) {
         outputLower.innerHTML = resultado;
-      } else if (isNaN(resultado)) {
+      } else if (Number.isNaN(resultado)) {
         outputLower.innerHTML = "Error";
       } else {
         outputLower.innerHTML = resultado.toFixed(3);
@@ -72,7 +73,7 @@ function botonIgual() {
       resultado = num1 * num2;
       if (Number.isInteger(resultado)) {
         outputLower.innerHTML = resultado;
-      } else if (isNaN(resultado)) {
+      } else if (Number.isNaN(resultado)) {
         outputLower.innerHTML = "Error";
       } else {
         outputLower.innerHTML = resultado.toFixed(3);
@@ -82,11 +83,13 @@ function botonIgual() {
       resultado = num1 / num2;
       if (Number.isInteger(resultado)) {
         outputLower.innerHTML = resultado;
-      } else if (isNaN(resultado)) {
+      } else if (Number.isNaN(resultado)) {
         outputLower.innerHTML = "Error";
       } else {
         outputLower.innerHTML = resultado.toFixed(3);
       }
+      break;
+    default:
       break;
   }
   num1 = [];
@@ -96,7 +99,6 @@ function botonIgual() {
 function botonPunto() {
   if (!outputLower.innerHTML.includes(".")) {
     outputLower.innerHTML += ".";
-  } else {
   }
 }
 
